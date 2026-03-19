@@ -12,7 +12,7 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)  # criando o retangulo dentro da janela
 
     def run(self):
-        menu_opcao = 0 # variavel usada para fazer iterção no menu
+        menu_opcao = 0 # variavel usada para fazer iteração no menu
         # metodo usado para carregar a música de fundo
         pygame.mixer_music.load('./asset/Menu.mp3')
         # comando para tocar a música - parametro -1 para musica repetir
