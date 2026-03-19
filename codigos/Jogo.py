@@ -4,7 +4,7 @@ import pygame
 class Jogo:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(900, 600))
+        self.window = pygame.display.set_mode(size=(900, 509))
 
     def run(self):
         while True:
