@@ -17,8 +17,9 @@ class Menu:
         pygame.mixer_music.play(-1)
         # loop usado para ficar desenhando o desenho da imagem de opçao de menu
         while True:
-            # metodo blit usado para desenhar a imagem dentro do retangulo
+            # metodo blit usado para desenhar a  de fundo dentro do retangulo
             self.window.blit(source=self.surf, dest=self.rect)
+            # carregando as imagens de texto dentro do retangulo
             self.menu_text(25,'Trabalho Linguagem de Programação Aplicada',(0,0,0),((TELA_LARGURA/2),20))
             self.menu_text(100, 'Space War', (COR_LARANJA), ((TELA_LARGURA / 2), 100))
 
