@@ -28,9 +28,9 @@ class Menu:
             # loop para iterar na constante MENU_OPCAO
             for i in range(len(MENU_OPCAO)):
                 if i == menu_opcao:
-                    self.menu_text(35, MENU_OPCAO[i],COR_AZUL, ((TELA_LARGURA / 2), 250 + 30 * i))
+                    self.menu_text(27, MENU_OPCAO[i],COR_AZUL, ((TELA_LARGURA / 2), 250 + 30 * i))
                 else:
-                    self.menu_text(35, MENU_OPCAO[i], COR_PRETA, ((TELA_LARGURA / 2), 250 + 30 * i))
+                    self.menu_text(27, MENU_OPCAO[i], COR_PRETA, ((TELA_LARGURA / 2), 250 + 30 * i))
             pygame.display.flip()  # metodo para atualizar a janela
             # checando todos os eventos
             for event in pygame.event.get():
