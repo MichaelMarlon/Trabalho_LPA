@@ -18,6 +18,7 @@ class Jogo:
             menu_return = menu.run() # variavel receberá o retorno do menu
             if menu_return in [MENU_OPCAO[0], MENU_OPCAO[1]]:
                 fase = Fase(self.window,'Fase1',menu_return)
+                return_fase = fase.run()
             elif menu_return == MENU_OPCAO[3]:
                 pygame.quit()  # fechando a janela
                 quit()  # finalizando pygame
