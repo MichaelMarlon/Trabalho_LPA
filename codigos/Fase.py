@@ -2,6 +2,7 @@ import random
 
 import pygame
 
+from asset.EntidadeMediator import EntidadeMediator
 from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO
 from codigos.Entidade import Entidade
 from codigos.EntidadeFactory import EntidadeFactory
@@ -31,6 +32,7 @@ class Fase:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
             pygame.display.flip()
+            EntidadeMediator.verificar_colisao(entidade_lista=self.lista_entidade)
             # Conferido todos os eventos
             for event in pygame.event.get():
                 # Evento de saida

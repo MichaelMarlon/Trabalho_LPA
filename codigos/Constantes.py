@@ -48,3 +48,14 @@ VEL_ENTIDADE = {
     'Inimigo1': 2,
     'Inimigo2': 1
 }
+VIDA_ENTIDADE = {
+    'Fundo': 999,
+    'Jogador1': 300,
+    'Jogador2': 300,
+    'TiroJogador1':1,
+    'TiroJogador2': 1,
+    'Inimigo1': 50,
+    'Inimigo2': 60,
+    'TiroInimigo1': 1,
+    'TiroInimigo2': 1
+}
