@@ -1,5 +1,7 @@
 # Design Pattern: classe responsavel por gerar as entidades
+from codigos.Constantes import TELA_LARGURA
 from codigos.Fundo import Fundo
+from codigos.Jogador import Jogador
 
 
 class EntidadeFactory:
@@ -14,3 +16,8 @@ class EntidadeFactory:
 
             case 'Fundo2':
                 return Fundo('Fase2',(0,0))
+
+            case 'Jogador1':
+                return Jogador('Jogador1',(TELA_LARGURA/2-30,447))
+            case 'Jogador2':
+                return Jogador('Jogador2', (TELA_LARGURA / 2+30, 430))

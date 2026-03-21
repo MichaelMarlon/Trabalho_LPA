@@ -15,3 +15,9 @@ MENU_OPCAO = (
 #T
 TELA_ALTURA = 509
 TELA_LARGURA = 900
+
+#V
+VEL_ENTIDADE = {
+    'Jogador1': 3,
+    'Jogador2': 3,
+}
