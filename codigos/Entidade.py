@@ -13,7 +13,7 @@ class Entidade(ABC):
         self.surf = pygame.image.load(f'./asset/{nome}.png').convert_alpha()
         self.rect = self.surf.get_rect(left=posicao[0], top=posicao[1])
         self.velocidade = 0
-        self.vida = VIDA_ENTIDADE[self.nome]
+        #self.vida = VIDA_ENTIDADE[self.nome]
 
     @abstractmethod
     def move(self):# metodo será implementado nas classes filhas

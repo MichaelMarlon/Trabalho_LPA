@@ -2,7 +2,7 @@ import random
 
 import pygame
 
-from asset.EntidadeMediator import EntidadeMediator
+from codigos.EntidadeMediator import EntidadeMediator
 from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO
 from codigos.Entidade import Entidade
 from codigos.EntidadeFactory import EntidadeFactory
