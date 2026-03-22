@@ -1,4 +1,10 @@
 import pygame
+#A
+ATRASO_ENTIDADE_TIRO = {
+    'Jogador1': 20,
+    'Jogador2': 15,
+
+}
 #C
 COR_LARANJA = (255,128,0)
 COR_PRETA = (0,0,0)
@@ -46,10 +52,14 @@ VEL_ENTIDADE = {
     'Jogador1': 5,
     'Jogador2': 5,
     'Inimigo1': 2,
-    'Inimigo2': 1
+    'Inimigo2': 1,
+    'TiroJogador1':3,
+    'TiroJogador2': 3,
 }
 VIDA_ENTIDADE = {
     'Fundo': 999,
+    'Fase1': 999,
+    'Fase2': 999,
     'Jogador1': 300,
     'Jogador2': 300,
     'TiroJogador1':1,

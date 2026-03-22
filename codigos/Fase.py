@@ -6,6 +6,8 @@ from codigos.EntidadeMediator import EntidadeMediator
 from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO
 from codigos.Entidade import Entidade
 from codigos.EntidadeFactory import EntidadeFactory
+from codigos.Inimigo import Inimigo
+from codigos.Jogador import Jogador
 
 
 class Fase:
@@ -31,8 +33,15 @@ class Fase:
             for ent in self.lista_entidade:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if isinstance(ent,(Jogador,Inimigo)):
+                    tiro = ent.tiro()
+                    if tiro is not None:
+                        self.lista_entidade.append(tiro)
+
             pygame.display.flip()
+            # Colicões
             EntidadeMediator.verificar_colisao(entidade_lista=self.lista_entidade)
+            EntidadeMediator.verificar_vida(entidade_lista=self.lista_entidade)
             # Conferido todos os eventos
             for event in pygame.event.get():
                 # Evento de saida
