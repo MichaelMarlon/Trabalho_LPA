@@ -13,20 +13,24 @@ from codigos.Jogador import Jogador
 
 
 class Fase:
-    def __init__(self, window, nome, game_mode):
+    def __init__(self, window: Surface, nome:str, game_mode:str, pontos_jogadores:list[int]):
         self.timeout = 20000 # 20 segundos
         self.window = window
         self.nome = nome
         self.game_mode = game_mode
         self.lista_entidade: list[Entidade] = []
         self.lista_entidade.append(EntidadeFactory.get_entidade(self.nome))
-        self.lista_entidade.append(EntidadeFactory.get_entidade('Jogador1'))
+        jogador = EntidadeFactory.get_entidade('Jogador1')
+        jogador.pontos = pontos_jogadores[0]
+        self.lista_entidade.append(jogador)
         if game_mode == MENU_OPCAO[1]:
-            self.lista_entidade.append(EntidadeFactory.get_entidade('Jogador2'))
+            jogador = EntidadeFactory.get_entidade('Jogador2')
+            jogador.pontos = pontos_jogadores[1]
+            self.lista_entidade.append(jogador)
         pygame.time.set_timer(EVENTO_INIMIGO,2000) # setando tempo para um evento
         pygame.time.set_timer(TEMPO_EVENTO,100) # 100ms
 
-    def run(self):
+    def run(self, pontos_jogadores:list[int]):
         pygame.mixer_music.load(f'./asset/{self.nome}.mp3')
         pygame.mixer_music.play(-1)
         # usado para o programa rodar em uma taxa de atualizaçao especifica
@@ -65,7 +69,18 @@ class Fase:
                     #logica para mudar de fase
                     self.timeout -= 100
                     if self.timeout == 0:
+                        for ent in self.lista_entidade:
+                            if isinstance(ent, Jogador) and ent.nome == 'Jogador1':
+                                pontos_jogadores[0] = ent.pontos
+                            if isinstance(ent, Jogador) and ent.nome == 'Jogador2':
+                                pontos_jogadores[1] = ent.pontos
                         return True
+                busca_jogador = False
+                for ent in self.lista_entidade:
+                    if isinstance(ent, Jogador):
+                        busca_jogador = True
+                if not busca_jogador:
+                    return False
 
     def texto_fase(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name='Lucida Sans Typewriter', size=text_size)

@@ -17,11 +17,12 @@ class Jogo:
             menu = Menu(self.window) # instanciando um objeto da classe Menu para implantantar o menu no jogo
             menu_return = menu.run() # variavel receberá o retorno do menu
             if menu_return in [MENU_OPCAO[0], MENU_OPCAO[1]]:
-                fase = Fase(self.window,'Fase1',menu_return)
-                return_fase = fase.run()
+                pontos_jogadores = [0,0] # [Jogador1, Jogador2]
+                fase = Fase(self.window,'Fase1',menu_return, pontos_jogadores)
+                return_fase = fase.run(pontos_jogadores)
                 if return_fase:
-                    fase = Fase(self.window, 'Fase2', menu_return)
-                    return_fase = fase.run()
+                    fase = Fase(self.window, 'Fase2', menu_return, pontos_jogadores)
+                    return_fase = fase.run(pontos_jogadores)
             elif menu_return == MENU_OPCAO[3]:
                 pygame.quit()  # fechando a janela
                 quit()  # finalizando pygame

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="implementada as pontuações">
-      <change afterPath="$PROJECT_DIR$/asset/Fase2.mp3" afterDir="false" />
+    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="Criadas classes Menu e Jogo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigos/Constantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Constantes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/EntidadeFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/EntidadeFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigos/Fase.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Fase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigos/Jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Jogo.py" afterDir="false" />
     </list>
@@ -24,9 +22,6 @@
       </list>
     </option>
   </component>
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="feature_level" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -36,12 +31,12 @@
     &quot;assignee&quot;: &quot;MichaelMarlon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MichaelMarlon/Trabalho_LPA.git&quot;,
-    &quot;accountId&quot;: &quot;ceed9c55-0e56-490c-b33a-ee0eb1b7f689&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MichaelMarlon/Trabalho_LPA.git",
+    "accountId": "99f832fa-d5e1-4b50-8abb-f7594136caf6"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -71,9 +66,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Portaria\Documents\Python\Trabalho_LPA\asset" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ARQUIVOS\ESTUDOS\CURSOS\Python\Trabalho_LPA\asset" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -90,6 +82,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -108,7 +101,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4c141bd692a7-e2d783800521-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26927.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
       </set>
     </attachedChunks>
   </component>
@@ -150,6 +144,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Criadas classes Menu e Jogo" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Trabalho_LPA$main.coverage" NAME="main Coverage Results" MODIFIED="1773880276965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Trabalho_LPA$main.coverage" NAME="main Coverage Results" MODIFIED="1774285032129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
