@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="implementado pontos dos jogadores">
-      <change afterPath="$PROJECT_DIR$/asset/Pontos.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset/Pontos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codigos/DBProxy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codigos/Pontos.py" afterDir="false" />
+    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="quase pronto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/Constantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Constantes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/Fase.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Fase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/Jogador.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Jogador.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/Jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Jogo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigos/Pontos.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Pontos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774287003445</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="quase pronto">
+      <option name="closed" value="true" />
+      <created>1774306360180</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774306360180</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,9 +156,10 @@
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="Criadas classes Menu e Jogo" />
     <MESSAGE value="implementado pontos dos jogadores" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementado pontos dos jogadores" />
+    <MESSAGE value="quase pronto" />
+    <option name="LAST_COMMIT_MESSAGE" value="quase pronto" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Trabalho_LPA$main.coverage" NAME="main Coverage Results" MODIFIED="1774304997493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Trabalho_LPA$main.coverage" NAME="main Coverage Results" MODIFIED="1774309440641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

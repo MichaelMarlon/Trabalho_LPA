@@ -3,7 +3,7 @@ from time import strftime
 
 import pygame
 from pygame import Surface, Rect
-from pygame.constants import KEYDOWN, K_RETURN, K_BACKSPACE
+from pygame.constants import KEYDOWN, K_RETURN, K_BACKSPACE, K_ESCAPE
 from pygame.font import Font
 
 from codigos.Constantes import COR_AMARELA, PONTUACAO_POSICAO, COR_VERDE, MENU_OPCAO, COR_BRANCA, COR_PRETA
@@ -19,7 +19,7 @@ class Pontos:
     def salvar(self,modo_jogo:str, pontos_jogadores:list[int]):
         pygame.mixer_music.load('./asset/Pontos.mp3')
         pygame.mixer_music.play(-1)
-        db_proxy = DBProxy('DBPontos')
+        db_proxy = DBProxy('DBPontos.db')
         nome = ''
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
@@ -43,13 +43,15 @@ class Pontos:
                 if event.type == KEYDOWN:
                     if event.key == K_RETURN and len(nome) == 4:
                         db_proxy.salvar({'nome':nome,'pontos':pontos,'data': pegar_data()})
+                        self.mostrar()
+                        return
                     elif event.key == K_BACKSPACE:
-                        pass
+                        nome = nome[:-1]
                     else:
                         if len(nome) < 4:
                             nome += event.unicode
 
-
+            self.texto_pontos(30, nome, COR_PRETA, PONTUACAO_POSICAO['Nome'])
             pygame.display.flip()
             pass
 
@@ -58,9 +60,30 @@ class Pontos:
         pygame.mixer_music.load('./asset/Pontos.mp3')
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
+        self.texto_pontos(40,'TOP 10 PONTOS',COR_PRETA,PONTUACAO_POSICAO['Título'])
+        self.texto_pontos(30, 'NOME   PONTOS   DATA     ', COR_PRETA, PONTUACAO_POSICAO['Label'])
+        dbprox = DBProxy('DBPontos.db')
+        lista_pontos = dbprox.rev_top10()
+        dbprox.fechar()
+
+        for ponto_jogador in lista_pontos:
+            id, nome, pontos ,data = ponto_jogador
+            self.texto_pontos(30,f'{nome}   {pontos:05d}   {data}', COR_PRETA,PONTUACAO_POSICAO[lista_pontos.index(ponto_jogador)])
+
+
         while True:
+            for event in pygame.event.get():
+                # Evento de saida
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                if event.type == KEYDOWN:
+                    if event.key == K_ESCAPE:
+                        return
+
             pygame.display.flip()
-            pass
+
+
 
     def texto_pontos(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
