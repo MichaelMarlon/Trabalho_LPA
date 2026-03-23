@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 import pygame.image
 
-from codigos.Constantes import VIDA_ENTIDADE, DANO_ENTIDADE
+from codigos.Constantes import VIDA_ENTIDADE, DANO_ENTIDADE, PONTOS_ENTIDADE
 
 
 class Entidade(ABC):
@@ -15,6 +15,7 @@ class Entidade(ABC):
         self.velocidade = 0
         self.vida = VIDA_ENTIDADE[self.nome]
         self.dano = DANO_ENTIDADE[self.nome]
+        self.pontos = PONTOS_ENTIDADE[self.nome]
         self.ultimo_dmg = 'none'
     @abstractmethod
     def move(self):# metodo será implementado nas classes filhas

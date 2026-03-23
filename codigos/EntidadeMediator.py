@@ -22,6 +22,17 @@ class EntidadeMediator:
                 ent.vida = 0
 
     @staticmethod
+    def __gera_pontos(inimigo:Inimigo,lista_entidade:list[Entidade]):
+        # verificação de quem deu o tiro no inimigo
+        if inimigo.ultimo_dmg == 'TiroJogador1':
+            for ent in lista_entidade:
+                if ent.nome == 'Jogador1':
+                    ent.pontos += inimigo.pontos
+        elif inimigo.ultimo_dmg == 'TiroJogador2':
+            for ent in lista_entidade:
+                if ent.nome == 'Jogador2':
+                    ent.pontos += inimigo.pontos
+    @staticmethod
     def __verificar_colisao_entidade(ent1, ent2):
         valida_interacao = False
         # certificando que as colisoes ocorra somente entre tiros e jogadores ou inimigos
@@ -45,11 +56,6 @@ class EntidadeMediator:
                 ent1.ultimo_dmg = ent2.nome
                 ent2.ultimo_dmg = ent1.nome
 
-
-
-
-
-
     @staticmethod
     def verificar_colisao(entidade_lista: list[Entidade]):
         for i in  range(len(entidade_lista)):
@@ -64,4 +70,6 @@ class EntidadeMediator:
     def verificar_vida(entidade_lista: list[Entidade]):
         for ent in entidade_lista:
             if ent.vida <= 0:
+                if isinstance(ent,Inimigo):
+                    EntidadeMediator.__gera_pontos(ent,entidade_lista)
                 entidade_lista.remove(ent)

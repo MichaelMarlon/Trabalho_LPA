@@ -13,7 +13,8 @@ COR_PRETA = (0,0,0)
 COR_BRANCA = (255,255,255)
 COR_AMARELA = (255,255,0)
 COR_AZUL = (0,0,255)
-
+COR_VERDE =(0,128,0)
+COR_CIANO = (0,128,128)
 #D
 DANO_ENTIDADE = {
     'Fundo': 0,
@@ -59,6 +60,20 @@ MENU_OPCAO = (
     'PONTUAÇÃO',
     'SAIR'
 )
+#P
+PONTOS_ENTIDADE = {
+    'Fundo': 0,
+    'Fase1': 0,
+    'Fase2': 0,
+    'Jogador1': 0,
+    'Jogador2': 0,
+    'TiroJogador1': 0,
+    'TiroJogador2': 0,
+    'Inimigo1': 100,
+    'Inimigo2': 100,
+    'TiroInimigo1': 0,
+    'TiroInimigo2': 0,
+}
 
 #T
 TELA_ALTURA = 509
