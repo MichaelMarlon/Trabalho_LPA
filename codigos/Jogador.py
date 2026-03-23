@@ -1,3 +1,5 @@
+from tkinter.font import Font
+
 import pygame.key
 
 from codigos.Constantes import VEL_ENTIDADE, TELA_ALTURA, TELA_LARGURA, JOGADOR_BAIXO, JOGADOR_CIMA, JOGADOR_ESQUERDA, \
@@ -31,5 +33,22 @@ class Jogador(Entidade):
             pressionada = pygame.key.get_pressed()
             if pressionada[JOGADOR_TIRO[self.nome]]:
                 return TiroJogador(nome=f'Tiro{self.nome}',posicao=(self.rect.centerx,self.rect.centery))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

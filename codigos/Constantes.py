@@ -81,6 +81,7 @@ PONTOS_ENTIDADE = {
 TELA_ALTURA = 509
 TELA_LARGURA = 900
 TEMPO_EVENTO = pygame.USEREVENT + 2
+TEMPO_FASE = 10000
 #
 VEL_ENTIDADE = {
     'Jogador1': 6,
@@ -91,6 +92,22 @@ VEL_ENTIDADE = {
     'TiroJogador2': 3,
     'TiroInimigo1':5,
     'TiroInimigo2': 2,
+}
+PONTUACAO_POSICAO ={
+    'Título':(TELA_LARGURA/2,50),
+    'DigiteNome':(TELA_LARGURA/2,80),
+    'Label': (TELA_LARGURA/2,90),
+    'Nome':(TELA_LARGURA/2,110),
+    0:(TELA_LARGURA/2,110),
+    1:(TELA_LARGURA/2,130),
+    2:(TELA_LARGURA/2,150),
+    3:(TELA_LARGURA/2,170),
+    4:(TELA_LARGURA/2,190),
+    5:(TELA_ALTURA/2,210),
+    6:(TELA_ALTURA/2,230),
+    7:(TELA_ALTURA/2,250),
+    8:(TELA_ALTURA/2,270),
+    9:(TELA_ALTURA/2,290),
 }
 VIDA_ENTIDADE = {
     'Fundo': 999,

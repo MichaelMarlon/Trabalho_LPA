@@ -5,7 +5,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from codigos.EntidadeMediator import EntidadeMediator
-from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO, COR_VERDE, COR_CIANO, TEMPO_EVENTO
+from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO, COR_VERDE, COR_CIANO, TEMPO_EVENTO, TEMPO_FASE
 from codigos.Entidade import Entidade
 from codigos.EntidadeFactory import EntidadeFactory
 from codigos.Inimigo import Inimigo
@@ -14,7 +14,7 @@ from codigos.Jogador import Jogador
 
 class Fase:
     def __init__(self, window: Surface, nome:str, game_mode:str, pontos_jogadores:list[int]):
-        self.timeout = 20000 # 20 segundos
+        self.timeout = TEMPO_FASE # 20 segundos
         self.window = window
         self.nome = nome
         self.game_mode = game_mode
