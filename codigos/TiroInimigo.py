@@ -1,3 +1,4 @@
+from codigos.Constantes import VEL_ENTIDADE
 from codigos.Entidade import Entidade
 
 
@@ -6,4 +7,4 @@ class TiroInimigo(Entidade):
         super().__init__(nome, posicao)
 
     def move(self):
-        pass
+        self.rect.centery += VEL_ENTIDADE[self.nome]

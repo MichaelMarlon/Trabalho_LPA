@@ -35,6 +35,7 @@ class Fase:
                 ent.move()
                 if isinstance(ent,(Jogador,Inimigo)):
                     tiro = ent.tiro()
+                    # se a tecla de tiro for pressionada adiciona a entidade na lista
                     if tiro is not None:
                         self.lista_entidade.append(tiro)
 

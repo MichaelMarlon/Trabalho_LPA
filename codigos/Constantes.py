@@ -3,6 +3,8 @@ import pygame
 ATRASO_ENTIDADE_TIRO = {
     'Jogador1': 20,
     'Jogador2': 15,
+    'Inimigo1': 100,
+    'Inimigo2': 200,
 
 }
 #C
@@ -12,6 +14,21 @@ COR_BRANCA = (255,255,255)
 COR_AMARELA = (255,255,0)
 COR_AZUL = (0,0,255)
 
+#D
+DANO_ENTIDADE = {
+    'Fundo': 0,
+    'Fase1': 0,
+    'Fase2': 0,
+    'Jogador1': 1,
+    'Jogador2': 1,
+    'TiroJogador1': 25,
+    'TiroJogador2': 25,
+    'Inimigo1': 1,
+    'Inimigo2': 1,
+    'TiroInimigo1': 15,
+    'TiroInimigo2': 20,
+
+}
 #E
 EVENTO_INIMIGO = pygame.USEREVENT +1
 #J
@@ -47,14 +64,16 @@ MENU_OPCAO = (
 TELA_ALTURA = 509
 TELA_LARGURA = 900
 
-#V
+#
 VEL_ENTIDADE = {
-    'Jogador1': 5,
-    'Jogador2': 5,
-    'Inimigo1': 2,
+    'Jogador1': 6,
+    'Jogador2': 6,
+    'Inimigo1': 1,
     'Inimigo2': 1,
     'TiroJogador1':3,
     'TiroJogador2': 3,
+    'TiroInimigo1':5,
+    'TiroInimigo2': 2,
 }
 VIDA_ENTIDADE = {
     'Fundo': 999,
