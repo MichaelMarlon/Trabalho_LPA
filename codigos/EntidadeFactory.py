@@ -14,10 +14,10 @@ class EntidadeFactory:
     def get_entidade(nome_entidade:str):
 
         match nome_entidade:
-            case 'Fundo1':
+            case 'Fase1':
                 return Fundo('Fase1',(0,0))
 
-            case 'Fundo2':
+            case 'Fase2':
                 return Fundo('Fase2',(0,0))
 
             case 'Jogador1':

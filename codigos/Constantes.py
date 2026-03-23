@@ -32,6 +32,8 @@ DANO_ENTIDADE = {
 }
 #E
 EVENTO_INIMIGO = pygame.USEREVENT +1
+#F
+
 #J
 JOGADOR_CIMA ={
     'Jogador1': pygame.K_UP,
@@ -78,7 +80,7 @@ PONTOS_ENTIDADE = {
 #T
 TELA_ALTURA = 509
 TELA_LARGURA = 900
-
+TEMPO_EVENTO = pygame.USEREVENT + 2
 #
 VEL_ENTIDADE = {
     'Jogador1': 6,

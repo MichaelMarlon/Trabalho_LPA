@@ -5,7 +5,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from codigos.EntidadeMediator import EntidadeMediator
-from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO, COR_VERDE, COR_CIANO
+from codigos.Constantes import MENU_OPCAO, EVENTO_INIMIGO, COR_VERDE, COR_CIANO, TEMPO_EVENTO
 from codigos.Entidade import Entidade
 from codigos.EntidadeFactory import EntidadeFactory
 from codigos.Inimigo import Inimigo
@@ -14,15 +14,17 @@ from codigos.Jogador import Jogador
 
 class Fase:
     def __init__(self, window, nome, game_mode):
+        self.timeout = 20000 # 20 segundos
         self.window = window
         self.nome = nome
         self.game_mode = game_mode
         self.lista_entidade: list[Entidade] = []
-        self.lista_entidade.append(EntidadeFactory.get_entidade('Fundo1'))
+        self.lista_entidade.append(EntidadeFactory.get_entidade(self.nome))
         self.lista_entidade.append(EntidadeFactory.get_entidade('Jogador1'))
         if game_mode == MENU_OPCAO[1]:
             self.lista_entidade.append(EntidadeFactory.get_entidade('Jogador2'))
         pygame.time.set_timer(EVENTO_INIMIGO,2000) # setando tempo para um evento
+        pygame.time.set_timer(TEMPO_EVENTO,100) # 100ms
 
     def run(self):
         pygame.mixer_music.load(f'./asset/{self.nome}.mp3')
@@ -59,8 +61,11 @@ class Fase:
                     # variavel que escolherá entre o inimigo 1 ou 2
                     escolha = random.choice(('Inimigo1','Inimigo2'))
                     self.lista_entidade.append(EntidadeFactory.get_entidade(escolha))
-
-
+                if event.type == TEMPO_EVENTO:
+                    #logica para mudar de fase
+                    self.timeout -= 100
+                    if self.timeout == 0:
+                        return True
 
     def texto_fase(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name='Lucida Sans Typewriter', size=text_size)

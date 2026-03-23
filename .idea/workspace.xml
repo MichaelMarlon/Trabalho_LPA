@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="Criadas classes Menu e Jogo">
+    <list default="true" id="cc5997b9-aa39-4d85-a66c-47d2329dfaf6" name="Changes" comment="implementada as pontuações">
+      <change afterPath="$PROJECT_DIR$/asset/Fase2.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigos/Constantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Constantes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/Entidade.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Entidade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigos/EntidadeMediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/EntidadeMediator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigos/EntidadeFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/EntidadeFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codigos/Fase.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Fase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigos/Jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/codigos/Jogo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +24,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="feature_level" />
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -51,26 +50,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "feature__level",
-    "last_opened_file_path": "D:/ARQUIVOS/ESTUDOS/CURSOS/Python/Trabalho_LPA",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ARQUIVOS/ESTUDOS/CURSOS/Python/Trabalho_LPA&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Portaria\Documents\Python\Trabalho_LPA\asset" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ARQUIVOS\ESTUDOS\CURSOS\Python\Trabalho_LPA\asset" />
     </key>
   </component>
   <component name="RunManager">
