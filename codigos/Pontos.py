@@ -61,7 +61,7 @@ class Pontos:
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
         self.texto_pontos(40,'TOP 10 PONTOS',COR_PRETA,PONTUACAO_POSICAO['Título'])
-        self.texto_pontos(30, 'NOME   PONTOS   DATA     ', COR_PRETA, PONTUACAO_POSICAO['Label'])
+        self.texto_pontos(30, 'NOME       PONTOS       DATA     ', COR_PRETA, PONTUACAO_POSICAO['Label'])
         dbprox = DBProxy('DBPontos.db')
         lista_pontos = dbprox.rev_top10()
         dbprox.fechar()
@@ -95,7 +95,7 @@ class Pontos:
 def pegar_data():
     current_datetime = datetime.now()
     current_time = current_datetime.strftime("%H:%M")
-    current_date = current_datetime,strftime("d/%m/%y")
+    current_date = current_datetime.strftime("%d/%m/%y")
     return f'{current_time} - {current_date}'
 
 

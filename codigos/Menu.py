@@ -23,7 +23,10 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             # carregando as imagens de texto dentro do retangulo
             self.menu_text(25, 'Trabalho Linguagem de Programação Aplicada', (0, 0, 0), ((TELA_LARGURA / 2), 20))
+            self.menu_text(25, 'J1: CTRL(direita) - Atirar, setas - MOVER / J2: CTRL(esquerda) - Atirar, w,a,s,d - MOVER', (0, 0, 0), ((TELA_LARGURA / 2), 40))
+
             self.menu_text(100, 'Space War', COR_LARANJA, ((TELA_LARGURA / 2), 100))
+
 
             # loop para iterar na constante MENU_OPCAO
             for i in range(len(MENU_OPCAO)):

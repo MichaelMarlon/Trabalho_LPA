@@ -21,7 +21,7 @@ class DBProxy:
 
 
     def fechar(self):
-        pass
+        self.conexao.close()
 
 
 
