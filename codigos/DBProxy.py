@@ -17,7 +17,7 @@ class DBProxy:
 
 
     def rev_top10(self) -> list:
-        return self.conexao.execute('SELECT * FROM dados ORDER BY pontos DESC LIMIT 10').fetchall()
+        return self.conexao.execute('SELECT * FROM dados ORDER BY pontos DESC LIMIT 5').fetchall()
 
 
     def fechar(self):
